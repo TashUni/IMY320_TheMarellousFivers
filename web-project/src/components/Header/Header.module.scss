@@ -15,18 +15,19 @@
 
 .Container {
   display: grid;
-  grid-template-columns: 1fr 350px;
+  grid-template-columns: 2fr 1fr;
 }
 
 .Container input {
   margin-top: 50px;
-  width: 90%;
-  padding: 12px 14px;
+  width: 80%;
+  padding: 12px 0px 12px 40px;
   background: #F2F2F7;
   color: #888;
   border:  none;
   border-radius: 0.3rem;
   font-size: 0.9rem;
+  position: relative;
 }
 
 .Container input:focus {
@@ -39,7 +40,7 @@
 
 .SearchBox img {
   position: absolute;
-  right: 17px;
+  left: 7px;
   top: 57px;
   width: 27px;
 }
