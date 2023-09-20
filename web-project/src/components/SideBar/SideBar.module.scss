@@ -1,4 +1,4 @@
-h1 {
+.heading {
     color: white;
     text-align: center;
     font-family: 'Jost';
@@ -18,7 +18,7 @@ h1 {
     flex-direction: column;
 }
 
-nav, p, #recent {
+nav, p, .recent {
     font-family: 'Jost';
     font-size: 1.6rem;
 }

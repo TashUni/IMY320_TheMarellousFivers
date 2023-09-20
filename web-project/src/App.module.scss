@@ -1,0 +1,9 @@
+.App {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+}
+
+@font-face {
+  font-family: Jost;
+  src: url("../public/fonts/jost/Jost-VariableFont_wght.ttf");
+}
