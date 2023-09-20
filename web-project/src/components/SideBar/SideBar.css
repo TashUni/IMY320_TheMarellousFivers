@@ -1,0 +1,87 @@
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Jost';
+    font-weight: 250;
+    font-size: 3rem;
+    margin-top: 45px;
+    margin-bottom: 40px;
+}
+
+.container {
+    border-radius: 0rem 0.625rem 0.625rem 0rem;
+    box-shadow: 5px 0px 10px 0px rgba(32, 34, 38, 0.50);
+    height: 100vh;
+    overflow: scroll;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+
+nav, p, #recent {
+    font-family: 'Jost';
+    font-size: 1.6rem;
+}
+
+nav .active {
+    outline: 1px solid #BCFD42;
+    border-radius: 2px;
+}
+
+nav div:hover {
+    outline: 1px solid #BCFD42;
+    border-radius: 5px;
+    background-color: white;
+    color: #202226;
+    cursor: pointer;
+}
+
+span {
+    font-weight: bold;
+}
+
+.container {
+    background-color: #202226;
+}
+
+.topNav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+}
+
+.bottomNav {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.bottomNav.larger {
+    font-size: 2rem;
+    font-weight: 300;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 25px;
+}
+
+.topNav div, .bottomNav div {
+    margin: 10px 15%;
+    padding: 3px;
+}
+
+.bottomNav div {
+    font-weight: 200;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.bottomNav #recent {
+    font-weight: normal;
+    margin: 20px;
+}
+
+hr {
+    margin: 10px 50px;
+}
