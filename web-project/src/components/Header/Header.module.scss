@@ -1,7 +1,45 @@
 .Header {
-  color: red
+  padding-left: 30px;
 }
 
-h1 {
+.h1 {
   color: black;
+  margin-bottom: 0;
+}
+
+.p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+.Container {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+}
+
+.Container input {
+  margin-top: 50px;
+  width: 90%;
+  padding: 12px 14px;
+  background: #F2F2F7;
+  color: #888;
+  border:  none;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.Container input:focus {
+  outline: none;
+}
+
+.SearchBox {
+  position: relative;
+}
+
+.SearchBox img {
+  position: absolute;
+  right: 17px;
+  top: 57px;
+  width: 27px;
 }
