@@ -1,0 +1,14 @@
+.Container {
+  border: var(--border-width) solid var(--cl-blue);
+  margin-bottom: var(--margin);
+  margin-left: var(--margin);
+  border-radius: var(--border-rad);
+}
+
+.Heading {
+  font-size: var(--font-size-heading);
+  margin-left: var(--margin);
+  margin-top: var(--margin);
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
