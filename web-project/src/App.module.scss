@@ -24,8 +24,11 @@
   --font-paragraph: Roboto;
   --cl-pale: #f8f8f8;
   --cl-green: #06d6a2;
+  --cl-pale-green: #aeeada;
   --cl-blue: #1b9aab;
+  --cl-pale-blue: #a1dae5;
   --cl-red: #f0476e;
+  --cl-pale-red: #e7a2b3;
   --cl-yellow: #fec43e;
   --font-size-subheading: 1.5rem;
   --margin: 20px;
@@ -83,6 +86,24 @@
 
 .inputBox input:focus {
   outline: none;
+}
+
+.ModulesContainer {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.UpcomingToday {
+  background-color: var(--cl-pale);
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+  margin-bottom: var(--margin);
+}
+
+.ModulesPage {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
 .inputBox input {

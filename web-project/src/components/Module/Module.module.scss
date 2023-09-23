@@ -1,0 +1,38 @@
+.Container {
+  margin: var(--margin);
+  margin-left: 0;
+  margin-top: 0;
+  border-radius: var(--border-rad);
+  padding: var(--margin);
+}
+
+.Container:nth-child(even) {
+  margin-right: 0;
+}
+
+.Title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-subheading);
+   margin-top: 0;
+}
+
+.One, .Two, .Three, .Four {
+  background-size: cover;
+  background-blend-mode: color-burn;
+}
+
+.One {
+  background-image: url("./contours/1.svg");
+}
+
+.Two {
+  background-image: url("./contours/2.svg");
+}
+
+.Three {
+  background-image: url("./contours/3.svg");
+}
+
+.Four {
+  background-image: url("./contours/4.svg");
+}

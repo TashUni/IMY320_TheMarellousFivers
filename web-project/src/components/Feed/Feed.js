@@ -1,5 +1,6 @@
 import Announcement from "../Announcement/Announcement";
 import style from './feed.module.scss';
+import colors from "../colors";
 
 const data = [
     {
@@ -7,40 +8,40 @@ const data = [
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a vulputate urna. Nam sit amet nisi vitae ligula pulvinar porttitor. Vestibulum vitae magna et ipsum scelerisque ultricies quis vitae justo. Donec ut ultricies purus. Morbi eget ligula tortor. Cras pulvinar lobortis libero non ullamcorper. Donec quis urna nec mi eleifend tincidunt. Nam id dictum elit.",
         heading: "Practical Postponed",
         profilePhoto: "assets/images/profile.png",
-        color: "#f0476e",
-        isWhite: true
+        color: colors["IMY320"].normal,
+        isWhite: colors["IMY320"].whiteText,
     },
     {
         module: "COS333",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a vulputate urna. Nam sit amet nisi vitae ligula pulvinar porttitor. Vestibulum vitae magna et ipsum scelerisque ultricies quis vitae justo. Donec ut ultricies purus. Morbi eget ligula tortor. Cras pulvinar lobortis libero non ullamcorper. Donec quis urna nec mi eleifend tincidunt. Nam id dictum elit.",
         heading: "Class Test",
         profilePhoto: "assets/images/profile.png",
-        color: "#77677e",
-        isWhite: true
+        color: colors["COS333"].normal,
+        isWhite: colors["COS333"].whiteText
     },
     {
         module: "WTW164",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a vulputate urna. Nam sit amet nisi vitae ligula pulvinar porttitor. Vestibulum vitae magna et ipsum scelerisque ultricies quis vitae justo. Donec ut ultricies purus. Morbi eget ligula tortor. Cras pulvinar lobortis libero non ullamcorper. Donec quis urna nec mi eleifend tincidunt. Nam id dictum elit.",
         heading: "Attendance is shocking!",
         profilePhoto: "assets/images/profile.png",
-        color: "#fecc65",
-        isWhite: false
+        color: colors["WTW164"].normal,
+        isWhite: colors["WTW164"].whiteText
     },
     {
         module: "WTW164",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a vulputate urna. Nam sit amet nisi vitae ligula pulvinar porttitor. Vestibulum vitae magna et ipsum scelerisque ultricies quis vitae justo. Donec ut ultricies purus. Morbi eget ligula tortor. Cras pulvinar lobortis libero non ullamcorper. Donec quis urna nec mi eleifend tincidunt. Nam id dictum elit.",
         heading: "You haven't seen the last of me!",
         profilePhoto: "assets/images/profile.png",
-        color: "#fecc65",
-        isWhite: false
+        color: colors["WTW164"].normal,
+        isWhite: colors["WTW164"].whiteText
     },
     {
         module: "WTW164",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a vulputate urna. Nam sit amet nisi vitae ligula pulvinar porttitor. Vestibulum vitae magna et ipsum scelerisque ultricies quis vitae justo. Donec ut ultricies purus. Morbi eget ligula tortor. Cras pulvinar lobortis libero non ullamcorper. Donec quis urna nec mi eleifend tincidunt. Nam id dictum elit.",
         heading: "Attendance is shocking!",
         profilePhoto: "assets/images/profile.png",
-        color: "#fecc65",
-        isWhite: false
+        color: colors["WTW164"].normal,
+        isWhite: colors["WTW164"].whiteText
     }
 ];
 
