@@ -30,7 +30,7 @@ const data = [
     {
         module: "WTW164",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a vulputate urna. Nam sit amet nisi vitae ligula pulvinar porttitor. Vestibulum vitae magna et ipsum scelerisque ultricies quis vitae justo. Donec ut ultricies purus. Morbi eget ligula tortor. Cras pulvinar lobortis libero non ullamcorper. Donec quis urna nec mi eleifend tincidunt. Nam id dictum elit.",
-        heading: "Attendance is shocking!",
+        heading: "You haven't seen the last of me!",
         profilePhoto: "assets/images/profile.png",
         color: "#fecc65",
         isWhite: false
