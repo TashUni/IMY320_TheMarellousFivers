@@ -59,12 +59,37 @@
   border-radius: var(--border-rad);
   margin: var(--margin);
   padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .ul {
   font-family: var(--font-paragraph);
   font-size: 1.2rem;
   margin-left: 20px;
+}
+
+.inputBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputBox button {
+  width: 30%;
+  border: none;
+  background-color: var(--cl-green);
+}
+
+.inputBox input:focus {
+  outline: none;
+}
+
+.inputBox input {
+  border: 2px solid var(--cl-green);
+  background-color: var(--cl-pale);
+  border-radius: 3px;
+  width: 70%;
 }
 
 .EventContainerPara {

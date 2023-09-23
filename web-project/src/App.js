@@ -3,13 +3,14 @@ import Navbar from "./components/Navbar/Navbar";
 import Profile from './components/Profile/Profile';
 import Feed from "./components/Feed/Feed";
 import Calender from "./components/Calender/Calender";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 
 function App() {
 
     const [date, setDate] = useState(new Date());
     const [selectedEvents, setSelectedEvents] = useState([]);
+    const inputRef = useRef(null);
 
     useEffect(() => {
         console.log("updating date value to " + date);
@@ -24,6 +25,24 @@ function App() {
         setSelectedEvents(newEvents);
 
     }, [date])
+
+    const addEvent = () => {
+
+        console.log("adding...");
+        console.log(date);
+
+        console.log(inputRef.current.value)
+
+        let newEvent = {
+            name: inputRef.current.value,
+            date: date
+        }
+
+        inputRef.current.value = "";
+
+        setEvents((prevEvents) => [...prevEvents, newEvent]);
+        setSelectedEvents((prevEvents) => [...prevEvents, newEvent]);
+    }
 
     const [events, setEvents] = useState([
         {
@@ -45,19 +64,26 @@ function App() {
             <div className={styles.CalenderBox}>
                 <Calender events={events} setDate={setDate}/>
                 <div className={styles.EventContainer}>
-                    <p className={styles.EventContainerPara}>Events on <u>{date.toDateString()}:</u></p>
+                    <div>
+                        <p className={styles.EventContainerPara}>Events on <u>{date.toDateString()}:</u></p>
 
-                    {
-                        selectedEvents.length === 0 ?
-                            <p className={styles.noEvents}>No events</p> :
-                            <ul className={styles.ul}>
-                                {
-                                    selectedEvents.map((el) => {
-                                        return <li>{el.name}</li>
-                                    })
-                                }
-                            </ul>
-                    }
+                        {
+                            selectedEvents.length === 0 ?
+                                <p className={styles.noEvents}>No events</p> :
+                                <ul className={styles.ul}>
+                                    {
+                                        selectedEvents.map((el) => {
+                                            return <li>{el.name}</li>
+                                        })
+                                    }
+                                </ul>
+                        }
+                    </div>
+
+                    <div className={styles.inputBox}>
+                        <input type="text" ref={inputRef}/>
+                        <button onClick={addEvent} >Add Event</button>
+                    </div>
 
                 </div>
             </div>
