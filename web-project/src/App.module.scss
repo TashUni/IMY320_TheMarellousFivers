@@ -90,8 +90,10 @@
 
 .ModulesContainer {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: calc(1fr - var(--margin)) calc(1fr - var(--margin));
   grid-template-columns: 1fr 1fr;
+  max-height: calc(100vh - 112px);
+  overflow-y: scroll;
 }
 
 .UpcomingToday {

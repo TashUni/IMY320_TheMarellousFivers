@@ -28,8 +28,6 @@ function Module({announcements, nextDeadlines, module, index}) {
         >
             <p className={styles.Title}>{module}</p>
 
-            <p>{styles[translateIndex(index % 4)]}</p>
-
             {!announcements.length == 0 &&
                 <React.Fragment>
                     <p>Latest Announcements: </p>

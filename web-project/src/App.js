@@ -81,6 +81,11 @@ function App() {
             name: "IMY320",
             announcements: ["More work! (We are trying to overtake 301)", "The lecturers need a break..."],
             nextDeadlines: ["4 May - Individual assignment"]
+        },
+        {
+            name: "WTW164",
+            announcements: ["Math ain't mathing this week guys! I'm taking a break from this. Kind regards, your lecturer."],
+            nextDeadlines: ["Absolutely nada"]
         }
     ];
 

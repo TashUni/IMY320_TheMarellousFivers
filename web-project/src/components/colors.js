@@ -5,13 +5,13 @@ let colors = {
         whiteText: false,
     },
     "COS333": {
-        normal: "#368335",
+        normal: "#3ca43b",
         pale: "rgb(170,227,170)",
         whiteText: true,
     },
     "WTW164": {
-        normal: "#bb802b",
-        pale: "rgb(56,45,30)",
+        normal: "#0e9393",
+        pale: "rgb(172,238,225)",
         whiteText: true,
     },
     "COS301": {
