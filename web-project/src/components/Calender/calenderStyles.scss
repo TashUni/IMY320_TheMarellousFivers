@@ -1,0 +1,14 @@
+.event-dot {
+  border: 2px solid rgba(165, 42, 42, 0.53);
+  z-index: 3;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 3px;
+  bottom: -7px;
+}
+
+.event-dot-container {
+  position: relative;
+}

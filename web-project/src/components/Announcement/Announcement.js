@@ -11,7 +11,7 @@ function Announcement(props) {
                 <div className={styles.TopBar}>
                     <h2 className={styles.h2}>{props.heading}</h2>
                     <div className={styles.img}>
-                        <img src={props.profilePhoto}/>
+                        <img alt="profile" src={props.profilePhoto}/>
                     </div>
                 </div>
                 <div>

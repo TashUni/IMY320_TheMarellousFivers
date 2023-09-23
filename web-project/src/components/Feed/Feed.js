@@ -1,5 +1,4 @@
 import Announcement from "../Announcement/Announcement";
-import {useMemo} from "react";
 import style from './feed.module.scss';
 
 const data = [

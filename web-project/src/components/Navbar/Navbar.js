@@ -5,7 +5,7 @@ function Navbar() {
     return(
         <Fragment>
             <div className={s.Navbar}>
-                <img src={"assets/images/logo.svg"} className={s.img}/>
+                <img alt={"website logo"} src={"assets/images/logo.svg"} className={s.img}/>
                 <ul className={s.ul}>
                     <li>home</li>
                     <li>modules</li>
