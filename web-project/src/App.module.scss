@@ -41,6 +41,37 @@
   flex: 1;
 }
 
+.noEvents {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.CalenderBox {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.EventContainer {
+  border-width: var(--border-width);
+  border-style: solid;
+  border-color: var(--cl-blue);
+  border-radius: var(--border-rad);
+  margin: var(--margin);
+  padding: 5px;
+}
+
+.ul {
+  font-family: var(--font-paragraph);
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+
+.EventContainerPara {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
 body {
   height: 100vh;
   margin: 0;

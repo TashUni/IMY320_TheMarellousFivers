@@ -3,9 +3,13 @@ import Calendar from "react-calendar";
 import './calender.scss';
 import styles from './calenderStyles.module.scss';
 
-function Calender({events, setEvents}) {
+function Calender({events, setDate}) {
 
     const [value, onChange] = useState(new Date());
+
+    useEffect(() => {
+        setDate(value);
+    }, [value]);
 
     function isSameDay(date1, date2) {
         return (
@@ -20,7 +24,6 @@ function Calender({events, setEvents}) {
         const today = new Date();
 
          if (events.some((eventDate) => isSameDay(eventDate.date, date))) {
-            console.log("Match: " + date);
             return (
                 <div className={styles.eventDotContainer}>
                     <div className={styles.eventDot}></div>

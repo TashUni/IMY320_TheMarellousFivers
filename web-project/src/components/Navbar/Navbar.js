@@ -9,7 +9,6 @@ function Navbar() {
                 <ul className={s.ul}>
                     <li>home</li>
                     <li>modules</li>
-                    <li>calender</li>
                     <li>profile</li>
                 </ul>
             </div>
