@@ -1,5 +1,8 @@
 # IMY320_TheMarellousFivers
-IMY 320 Web Project.
+IMY 320 Web Project. 
+
+Link:
+https://tashuni.github.io/IMY320_TheMarellousFivers/
 
 Documention: Created via MS Word and collabarative via SharePoint, links will be shared here to Google Drives of the final PDFs.
 
