@@ -9,7 +9,7 @@ const data = [
         heading: "Practical Postponed",
         profilePhoto: "assets/images/profile.png",
         color: "#f0476e",
-        isWhite: false
+        isWhite: true
     },
     {
         module: "COS333",
@@ -18,6 +18,22 @@ const data = [
         profilePhoto: "assets/images/profile.png",
         color: "#77677e",
         isWhite: true
+    },
+    {
+        module: "WTW164",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a vulputate urna. Nam sit amet nisi vitae ligula pulvinar porttitor. Vestibulum vitae magna et ipsum scelerisque ultricies quis vitae justo. Donec ut ultricies purus. Morbi eget ligula tortor. Cras pulvinar lobortis libero non ullamcorper. Donec quis urna nec mi eleifend tincidunt. Nam id dictum elit.",
+        heading: "Attendance is shocking!",
+        profilePhoto: "assets/images/profile.png",
+        color: "#fecc65",
+        isWhite: false
+    },
+    {
+        module: "WTW164",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a vulputate urna. Nam sit amet nisi vitae ligula pulvinar porttitor. Vestibulum vitae magna et ipsum scelerisque ultricies quis vitae justo. Donec ut ultricies purus. Morbi eget ligula tortor. Cras pulvinar lobortis libero non ullamcorper. Donec quis urna nec mi eleifend tincidunt. Nam id dictum elit.",
+        heading: "Attendance is shocking!",
+        profilePhoto: "assets/images/profile.png",
+        color: "#fecc65",
+        isWhite: false
     },
     {
         module: "WTW164",
@@ -53,8 +69,9 @@ function Feed() {
     return(
         <div className={style.Container}>
             <h2 className={style.Heading}>At a glance</h2>
-
-            {getAnnouncements()}
+            <div className={style.ModuleContainer}>
+                {getAnnouncements()}
+            </div>
 
         </div>
     )
