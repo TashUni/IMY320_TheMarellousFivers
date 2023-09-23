@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/IMY320_TheMarellousFivers/static/css/main.5e185c58.css",
+    "main.js": "/IMY320_TheMarellousFivers/static/js/main.c7c896be.js",
+    "static/js/787.f441ebf0.chunk.js": "/IMY320_TheMarellousFivers/static/js/787.f441ebf0.chunk.js",
+    "static/media/Roboto-LightItalic.ttf": "/IMY320_TheMarellousFivers/static/media/Roboto-LightItalic.c590382422f2742d788b.ttf",
+    "static/media/Roboto-Light.ttf": "/IMY320_TheMarellousFivers/static/media/Roboto-Light.333da16a3f3cc391d087.ttf",
+    "static/media/CabinetGrotesk-Variable.ttf": "/IMY320_TheMarellousFivers/static/media/CabinetGrotesk-Variable.5d8b44553adc33857c97.ttf",
+    "index.html": "/IMY320_TheMarellousFivers/index.html",
+    "main.5e185c58.css.map": "/IMY320_TheMarellousFivers/static/css/main.5e185c58.css.map",
+    "main.c7c896be.js.map": "/IMY320_TheMarellousFivers/static/js/main.c7c896be.js.map",
+    "787.f441ebf0.chunk.js.map": "/IMY320_TheMarellousFivers/static/js/787.f441ebf0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e185c58.css",
+    "static/js/main.c7c896be.js"
+  ]
+}
