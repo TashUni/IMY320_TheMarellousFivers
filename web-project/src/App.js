@@ -25,7 +25,7 @@ function App() {
     const handleChange = (e) => setInputValue(e.target.value);
 
 
-    const [tabSelected, setTabSelected] = useState(tabs.profile);
+    const [tabSelected, setTabSelected] = useState(tabs.home);
     const [todos, setTodos] = useState(["Walk the dog"])
 
     useEffect(() => {
