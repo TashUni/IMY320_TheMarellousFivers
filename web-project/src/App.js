@@ -25,7 +25,7 @@ function App() {
     const handleChange = (e) => setInputValue(e.target.value);
 
 
-    const [tabSelected, setTabSelected] = useState(tabs.modules);
+    const [tabSelected, setTabSelected] = useState(tabs.profile);
     const [todos, setTodos] = useState(["Walk the dog"])
 
     useEffect(() => {
@@ -138,6 +138,30 @@ function App() {
                 {
                     name: "The only assignment",
                     date: "5 Jun"
+                },
+                {
+                    name: "Get 100% for this or die",
+                    date: "4 June"
+                }
+            ]
+        },
+        {
+            subject: "WTW164",
+            assignments: [
+                {
+                    name: "Calculus 1",
+                    grade: 99,
+                    date: "10 Jul"
+                },
+                {
+                    name: "Trig tut test",
+                    grade: 90,
+                    date: "5 Jun"
+                },
+                {
+                    name: "Algebra tut test",
+                    grade: 95,
+                    date: "1 Jun"
                 }
             ]
         }
@@ -199,6 +223,18 @@ function App() {
             <div className={styles.Container}>
                 <Profile/>
                 <AllGrades grades={grades}/>
+                <div className={styles.Information}>
+                    <h2>Registration information</h2>
+
+                    <p className={styles.bold}>Fees due</p>
+                    <p>R100 000 000</p>
+
+                    <p className={styles.bold}>Holds</p>
+                    <ul>
+                        <li><p>We still need a model for the BA students, and you look too good for use to pass you yet.</p></li>
+                        <li><p>Also we need tutors for next year.</p></li>
+                    </ul>
+                </div>
             </div>
         }
 

@@ -27,6 +27,7 @@
   --cl-pale-green: #aeeada;
   --cl-blue: #1b9aab;
   --cl-pale-blue: #a1dae5;
+  --cl-very-pale: #def3f8;
   --cl-red: #f0476e;
   --cl-pale-red: #e7a2b3;
   --cl-yellow: #fec43e;
@@ -39,7 +40,7 @@
 
 .Container {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 3fr 1.3fr;
   position: relative;
   flex: 1;
 }
@@ -99,6 +100,23 @@
 .ModulesPage {
   display: grid;
   grid-template-columns: 2fr 1fr;
+}
+
+.Information {
+  background-color: var(--cl-pale);
+  margin-left: var(--margin);
+  margin-bottom: var(--margin);
+  padding: var(--margin);
+  padding-top: 0;
+  border-radius: var(--border-rad);
+}
+
+.Information p {
+  font-size: 1.2rem;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 .inputBox input {

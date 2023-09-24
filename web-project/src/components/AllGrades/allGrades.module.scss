@@ -1,10 +1,11 @@
 .Container {
   background-color: #b8e5ee;
   border: var(--border-width) solid var(--cl-blue);
-  margin-bottom: var(--margin);
   border-radius: var(--border-rad);
   padding: 15px;
   margin-left: var(--margin);
+  max-height: calc(100vh - 165px);
+  overflow-y: scroll;
 }
 
 .Submitted {
