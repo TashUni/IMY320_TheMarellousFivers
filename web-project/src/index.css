@@ -20,3 +20,10 @@ p, h2{
   font-family: var(--font-paragraph);
   font-weight: 300;
 }
+
+button {
+  border: none;
+  border-radius: var(--border-rad);
+  background-color: var(--cl-pale-blue);
+  cursor: pointer;
+}

@@ -1,0 +1,53 @@
+.Container {
+  background-color: #b8e5ee;
+  border: var(--border-width) solid var(--cl-blue);
+  margin-bottom: var(--margin);
+  border-radius: var(--border-rad);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: var(--cl-blue);
+  color: white;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+.Grade {
+  display: grid;
+  grid-template-columns: 2fr 30px;
+  height: 30px;
+  margin: 10px;
+}
+
+.Yellow {
+  background-color: var(--cl-yellow);
+}
+
+.Green {
+  background-color: var(--cl-green);
+}
+
+.Grade div:nth-child(2) {
+  font-weight: bold;
+  text-align: right;
+  border-radius: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top: 4px;
+  width: 30px;
+  padding-left: 2px;
+  padding-right: 2px;
+  height: 30px;
+}
+
+
+.h2 {
+  margin-top: 0;
+}

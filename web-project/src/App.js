@@ -3,8 +3,12 @@ import Navbar from "./components/Navbar/Navbar";
 import Profile from './components/Profile/Profile';
 import Feed from "./components/Feed/Feed";
 import Calender from "./components/Calender/Calender";
-import {useEffect, useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import Module from './components/Module/Module';
+import Todos from "./components/Todos/Todos";
+import InputButton from "./components/InputButton/InputButton";
+import Grades from "./components/Grades/Grades";
+import AllGrades from "./components/AllGrades/AllGrades";
 
 export const tabs = {
     home: 0,
@@ -16,12 +20,15 @@ function App() {
 
     const [date, setDate] = useState(new Date());
     const [selectedEvents, setSelectedEvents] = useState([]);
-    const inputRef = useRef(null);
+
+    const [inputValue, setInputValue] = useState("");
+    const handleChange = (e) => setInputValue(e.target.value);
+
+
     const [tabSelected, setTabSelected] = useState(tabs.modules);
+    const [todos, setTodos] = useState(["Walk the dog"])
 
     useEffect(() => {
-        console.log("updating date value to " + date);
-
         //loop through events and select the ones that are the same date
         let newEvents = events.filter((element) =>
                 element.date.getDay() === date.getDay() &&
@@ -37,20 +44,17 @@ function App() {
         console.log("tab: " + tabSelected);
     }, [tabSelected])
 
+    const seeAllGrades = () => {
+        setTabSelected(tabs.profile);
+    }
     const addEvent = () => {
 
-        console.log("adding...");
-        console.log(date);
-
-        console.log(inputRef.current.value)
-
         let newEvent = {
-            name: inputRef.current.value,
+            name: inputValue,
             date: date
         }
 
-        inputRef.current.value = "";
-
+        setInputValue("");
         setEvents((prevEvents) => [...prevEvents, newEvent]);
         setSelectedEvents((prevEvents) => [...prevEvents, newEvent]);
     }
@@ -89,6 +93,55 @@ function App() {
         }
     ];
 
+    const grades = [
+        {
+            subject: "COS301",
+            assignments: [
+                {
+                    name: "First Assigment",
+                    grade: 44,
+                    date: "1 May"
+                }
+            ]
+        },
+        {
+            subject: "IMY320",
+            assignments: [
+                {
+                    name: "Yummy Yan",
+                    grade: 69,
+                    date: "12 July"
+                },
+                {
+                    name: "Delicious Diffie",
+                    grade: 55,
+                    date: "5 Jun"
+                },
+                {
+                    name: "Coming soon",
+                    date: "1 Oct"
+                },
+                {
+                    name: "You will see",
+                    date: "2 Nov"
+                }
+            ]
+        },
+        {
+            subject: "COS333",
+            assignments: [
+                {
+                    name: "The only semester test",
+                    grade: 13,
+                    date: "10 Jul"
+                },
+                {
+                    name: "The only assignment",
+                    date: "5 Jun"
+                }
+            ]
+        }
+    ]
     return (
     <div className={styles.Body}>
         <Navbar setTabSelected={setTabSelected} />
@@ -96,7 +149,7 @@ function App() {
         {
             tabSelected === tabs.home &&
                 <div className={styles.Container}>
-                <Profile />
+                <Grades grades={grades} seeAllGrades={seeAllGrades}/>
                 <Feed />
                 <div className={styles.CalenderBox}>
                     <Calender events={events} setDate={setDate}/>
@@ -117,10 +170,9 @@ function App() {
                             }
                         </div>
 
-                        <div className={styles.inputBox}>
-                            <input type="text" ref={inputRef}/>
-                            <button onClick={addEvent} >Add Event</button>
-                        </div>
+                        <InputButton value={inputValue} onChange={handleChange} onClick={() => {
+                            addEvent();
+                        }} buttonText={"Add Event"}/>
 
                     </div>
                 </div>
@@ -133,13 +185,20 @@ function App() {
                 <div className={styles.ModulesContainer}>
                     {
                         modules.map((el, index) => {
-                            return <Module module={el.name} announcements={el.announcements} nextDeadlines={el.nextDeadlines} index={index % 4}/>
+                            return <Module module={el.name} announcements={el.announcements}
+                                           nextDeadlines={el.nextDeadlines} index={index % 4}/>
                         })
                     }
                 </div>
-                <div className={styles.UpcomingToday}>
+                <Todos todos={todos} setTodos={setTodos}/>
+            </div>
+        }
 
-                </div>
+        {
+            tabSelected === tabs.profile &&
+            <div className={styles.Container}>
+                <Profile/>
+                <AllGrades grades={grades}/>
             </div>
         }
 
