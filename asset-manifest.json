@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/IMY320_TheMarellousFivers/static/css/main.cd341313.css",
-    "main.js": "/IMY320_TheMarellousFivers/static/js/main.165c7c6c.js",
+    "main.js": "/IMY320_TheMarellousFivers/static/js/main.e24e9dd3.js",
     "static/js/787.f441ebf0.chunk.js": "/IMY320_TheMarellousFivers/static/js/787.f441ebf0.chunk.js",
     "static/media/Roboto-LightItalic.ttf": "/IMY320_TheMarellousFivers/static/media/Roboto-LightItalic.c590382422f2742d788b.ttf",
     "static/media/Roboto-Light.ttf": "/IMY320_TheMarellousFivers/static/media/Roboto-Light.333da16a3f3cc391d087.ttf",
@@ -14,11 +14,11 @@
     "static/media/logo.svg": "/IMY320_TheMarellousFivers/static/media/logo.7ccfccc3a7a004ec7283f65440863380.svg",
     "index.html": "/IMY320_TheMarellousFivers/index.html",
     "main.cd341313.css.map": "/IMY320_TheMarellousFivers/static/css/main.cd341313.css.map",
-    "main.165c7c6c.js.map": "/IMY320_TheMarellousFivers/static/js/main.165c7c6c.js.map",
+    "main.e24e9dd3.js.map": "/IMY320_TheMarellousFivers/static/js/main.e24e9dd3.js.map",
     "787.f441ebf0.chunk.js.map": "/IMY320_TheMarellousFivers/static/js/787.f441ebf0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd341313.css",
-    "static/js/main.165c7c6c.js"
+    "static/js/main.e24e9dd3.js"
   ]
 }
