@@ -1,0 +1,44 @@
+.UpcomingToday {
+  background-color: var(--cl-pale);
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+  margin-bottom: var(--margin);
+  padding: var(--margin);
+  border-radius: var(--border-rad);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.todo {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.todo .button {
+  width: 30%;
+}
+
+.todo div {
+  width: 70%;
+}
+
+.h2 {
+  margin-top: 0;
+}
+
+.input {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+}
+
+.input input {
+  margin-right: 5px;
+  border: 2px solid var(--cl-pale-green);
+  border-radius: var(--border-rad);
+  height: 20px;
+}
+
+.input input:focus {
+  outline: none;
+}

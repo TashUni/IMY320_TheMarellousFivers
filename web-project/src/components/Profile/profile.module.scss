@@ -1,0 +1,23 @@
+.img {
+  width: 50%;
+  padding-top: var(--margin);
+}
+
+.Container {
+  display: flex;
+  align-items: center;
+  background-color: var(--cl-blue);
+  flex-direction: column;
+  border-radius: var(--border-rad);
+  margin-bottom: var(--margin);
+  color: white;
+}
+
+.p {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.para {
+  margin-top: 0;
+}
