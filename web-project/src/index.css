@@ -19,6 +19,7 @@ code {
 p, h2{
   font-family: var(--font-paragraph);
   font-weight: 300;
+  line-height: 1.5;
 }
 
 

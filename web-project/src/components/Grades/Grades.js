@@ -6,7 +6,7 @@ function Grades(props) {
         <div className={s.Container}>
             <div>
             <h2 className={s.h2}>Recent Grades</h2>
-            <div className={s.GradesContainer}>
+            <div>
 
                 {
                     props.grades.map((el) => {

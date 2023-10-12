@@ -5,7 +5,39 @@ $margin: 15px;
     margin: $margin;
     padding-top: $margin;
     border-radius: var(--border-rad);
+    transition: box-shadow 0.3s ease-in-out;
+}
 
+.Container:hover {
+    box-shadow: 4px 3px 8px 0px rgba(2,9,9,0.32);
+    -webkit-box-shadow: 4px 3px 8px 0px rgba(2,9,9,0.32);
+    -moz-box-shadow: 4px 3px 8px 0px rgba(2,9,9,0.32);
+}
+
+.BackPanel {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.60);
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.ExpandedAnnouncement {
+    background-color: var(--cl-pale);
+    border-radius: var(--border-rad);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+    z-index: 100;
+    padding-top: 20px;
+}
+
+.expandedPara {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .p {
@@ -30,11 +62,16 @@ $margin: 15px;
 
 .img img{
     width: 100%;
+    border-radius: 100%;
+    object-fit: cover;
 }
+
 
 .BottomBar {
     display: flex;
     justify-content: right;
-    padding-right: 3px;
+    padding-right: 4px;
+    padding-bottom: 2px;
+    padding-top: 2px;
     border-radius: 0 0 var(--border-rad) var(--border-rad);
 }
