@@ -2,6 +2,7 @@ import styles from './announcement.module.scss';
 import {useState} from "react";
 import {Fragment} from "react";
 
+
 function Announcement(props) {
 
     const [isExpanded, setExpanded] = useState();
@@ -24,7 +25,7 @@ function Announcement(props) {
 
                     </div>
                     <div>
-                        <p className={styles.p}>{props.content.length > 300 ? props.content.substring(0, 300) + "..." : props.content}</p>
+                        <p className={styles.p}>{props.content.join(" ").length > 300 ? props.content.join(" ").substring(0, 300) + "..." : props.content}</p>
                     </div>
                     <div style={bottomBarStyle} className={styles.BottomBar}>{props.module}</div>
                 </div>
@@ -43,8 +44,23 @@ function Announcement(props) {
                             </div>
                             <button className={styles.Button} onClick={() => setExpanded(false)}>X</button>
                         </div>
-                        <div className={styles.expandedPara}>
-                            <p className={styles.p}>{props.content}</p>
+
+                        <div className={styles.scrollable}>
+                            <div className={styles.expandedPara}>
+                                {
+                                    props.content.map((el) => {
+                                        return <p className={styles.p}>{el}</p>
+                                    })
+                                }
+                            </div>
+                            <div className={styles.smallImage}>
+                                {
+                                    props.images.map((el) => {
+                                        console.log(el);
+                                        return <img  alt="annoucement Image" src={require(`./images/imgAnn1.jpeg`)}></img>
+                                    })
+                                }
+                            </div>
                         </div>
                         <div style={bottomBarStyle} className={styles.BottomBar}>{props.module}</div>
                     </div>
