@@ -26,6 +26,11 @@
   margin: 10px;
 }
 
+.Yellow .Green {
+  display: flex;
+  align-items: center;
+}
+
 .Yellow {
   background-color: var(--cl-yellow);
 }
@@ -39,12 +44,10 @@
   text-align: right;
   border-radius: 100%;
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
-  padding-top: 4px;
+  padding: 2px;
   width: 30px;
-  padding-left: 2px;
-  padding-right: 2px;
   height: 30px;
 }
 

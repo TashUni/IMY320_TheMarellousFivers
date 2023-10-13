@@ -21,6 +21,7 @@ function Announcement(props) {
                         <div className={styles.img}>
                             <img alt="profile" src={props.profilePhoto}/>
                         </div>
+
                     </div>
                     <div>
                         <p className={styles.p}>{props.content.length > 300 ? props.content.substring(0, 300) + "..." : props.content}</p>
@@ -35,11 +36,12 @@ function Announcement(props) {
                 <div className={styles.BackPanel} onClick={() => setExpanded(false)}></div>
                 <div className={styles.ExpandedAnnouncement}>
                     <div className={styles.InnerContent}>
-                        <div className={styles.TopBar}>
+                        <div className={styles.TopBarExpanded}>
                             <h2 className={styles.h2}>{props.heading}</h2>
-                            <div className={styles.img}>
+                            <div className={`${styles.img} ${styles.expandedImg}`}>
                                 <img alt="profile" src={props.profilePhoto}/>
                             </div>
+                            <button className={styles.Button} onClick={() => setExpanded(false)}>X</button>
                         </div>
                         <div className={styles.expandedPara}>
                             <p className={styles.p}>{props.content}</p>
