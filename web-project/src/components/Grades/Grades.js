@@ -22,7 +22,7 @@ function Grades(props) {
                                     el.assignments.map((a) => {
                                         return a.grade != null ?
                                         (<div className={s.Grade}>
-                                            <div>{a.name}</div>
+                                            <div className={s.GradePara}>{a.name}</div>
                                             <div className={a.grade < 60 ? s.Yellow : s.Green}>{a.grade}</div>
                                         </div>) : null
                                     })

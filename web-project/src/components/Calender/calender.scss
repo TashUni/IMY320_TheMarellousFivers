@@ -1,9 +1,10 @@
 .react-calendar {
-  width: 350px;
+  width: calc(100% - var(--margin));
   max-width: 100%;
   background: white;
   border: 2px solid var(--cl-blue);
   margin: var(--margin);
+  margin-bottom: 0;
   margin-top: 0;
   border-radius: var(--border-rad);
   font-family: Arial, Helvetica, sans-serif;
