@@ -365,7 +365,7 @@ function App() {
 
         {
             tabSelected === tabs.splash &&
-            <Splash/>
+            <Splash setTabSelected={setTabSelected}/>
         }
 
         {
