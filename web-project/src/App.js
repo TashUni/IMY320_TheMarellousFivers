@@ -31,6 +31,13 @@ function App() {
 
     const [moduleSelected, setModuleSelected] = useState(false);
     const [moduleColor, setModuleColor] = useState();
+    const [moduleHighlight, setModuleHighlight] = useState();
+
+    const [expandedModule, setExpandedModule] = useState({
+        name: "COS301",
+        announcements: ["No class Today!!!"],
+        nextDeadlines: ["3 May - Project"]
+    });
 
 
     useEffect(() => {
@@ -174,13 +181,23 @@ function App() {
         }
     ]
 
-    const expandModule = (name, color) => {
-        console.log("expanding module...");
-        console.log(name);
+    const expandModule = (name, color, highlight) => {
         console.log(color);
 
         setModuleSelected(true);
         setModuleColor(color);
+        setModuleHighlight(highlight);
+
+
+        for (let m of modules) {
+            if (m.name === name) {
+                console.log(m);
+
+                //expand this module
+                setExpandedModule(m);
+            }
+        }
+
 
 
     }
@@ -251,10 +268,11 @@ function App() {
 
                 {
                     moduleSelected &&
-                    <div className={styles.SelectedModule} style={{backgroundColor: moduleColor}}>
+                    <div className={styles.SelectedModule} style={{backgroundColor: moduleColor, borderLeft: `10px solid ${moduleHighlight}`}}>
                         <button className={styles.Button} onClick={() => {
                             setModuleSelected(false);
                         }}>X</button>
+                        <h2>{expandedModule.name}</h2>
                     </div>
 
                 }

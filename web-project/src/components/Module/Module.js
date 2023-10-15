@@ -28,7 +28,7 @@ function Module({announcements, nextDeadlines, module, index, expandModule}) {
              }}
 
              onClick={() => {
-                 expandModule(module, colors[module].pale);
+                 expandModule(module, colors[module].pale, colors[module].normal);
              }}
         >
             <p className={styles.Title}>{module}</p>
