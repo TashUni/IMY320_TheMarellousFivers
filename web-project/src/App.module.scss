@@ -55,6 +55,8 @@
   display: grid;
   grid-template-rows: auto 1fr;
   z-index: 0;
+  grid-row: 1/2;
+  grid-column: 3/4;
 }
 
 .InnerContent {
@@ -73,6 +75,15 @@
   justify-content: space-between;
   width: calc(100% - 10px - var(--margin));
 }
+
+
+.BackPanel {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 
 
 .ul {

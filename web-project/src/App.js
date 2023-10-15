@@ -9,6 +9,7 @@ import Todos from "./components/Todos/Todos";
 import InputButton from "./components/InputButton/InputButton";
 import Grades from "./components/Grades/Grades";
 import AllGrades from "./components/AllGrades/AllGrades";
+import ReactDOM from "react-dom/client";
 
 export const tabs = {
     home: 0,
@@ -24,9 +25,11 @@ function App() {
     const [inputValue, setInputValue] = useState("");
     const handleChange = (e) => setInputValue(e.target.value);
 
-
     const [tabSelected, setTabSelected] = useState(tabs.home);
     const [todos, setTodos] = useState(["Walk the dog"]);
+
+    const [moduleSelected, setModuleSelected] = useState(false);
+
 
     useEffect(() => {
         //loop through events and select the ones that are the same date
@@ -169,19 +172,25 @@ function App() {
         }
     ]
 
+    const expandModule = (name) => {
+        console.log("expanding module...");
+        console.log(name);
+
+
+    }
+
     return (
     <div className={styles.Body}>
         <Navbar setTabSelected={setTabSelected} />
 
         {
             tabSelected === tabs.home &&
+            <React.Fragment>
+
                 <div className={styles.Container}>
-                <Grades grades={grades} seeAllGrades={seeAllGrades}/>
-                <Feed />
 
-
-                <div className={styles.CalenderBox}>
-                    <Calender events={events} setDate={setDate}/>
+                    <div className={styles.CalenderBox}>
+                        <Calender events={events} setDate={setDate}/>
                         <div className={`${styles.EventContainer} fade-in-and-move delay4`}>
                             <div>
                                 <p className={styles.EventContainerPara}>Events on <u>{date.toDateString()}:</u></p>
@@ -205,21 +214,37 @@ function App() {
 
                         </div>
                     </div>
-            </div>
+
+                    <Grades grades={grades} seeAllGrades={seeAllGrades}/>
+
+                    <Feed/>
+
+                </div>
+
+
+
+            </React.Fragment>
         }
 
         {
-            tabSelected === tabs.modules &&
+            tabSelected === tabs.modules && !moduleSelected &&
             <div className={styles.ModulesPage}>
                 <div className={styles.ModulesContainer}>
                     {
                         modules.map((el, index) => {
                             return <Module module={el.name} announcements={el.announcements}
-                                           nextDeadlines={el.nextDeadlines} index={index % 4}/>
+                                           nextDeadlines={el.nextDeadlines} index={index % 4} expandModule={expandModule}/>
                         })
                     }
                 </div>
                 <Todos todos={todos} setTodos={setTodos}/>
+            </div>
+        }
+
+        {
+            tabSelected === tabs.modules && moduleSelected &&
+            <div className={styles.SelectedModule}>
+                I am a selected module!!!!
             </div>
         }
 

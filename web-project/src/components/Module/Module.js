@@ -1,4 +1,5 @@
 import styles from './Module.module.scss';
+import a from '../../App.module.scss';
 import colors from "../colors";
 import React from "react";
 
@@ -24,6 +25,10 @@ function Module({announcements, nextDeadlines, module, index}) {
                  borderLeft: `10px solid`,
                  borderColor: colors[module].normal,
                  backgroundColor: `${colors[module].pale}`
+             }}
+
+             onClick={() => {
+                 this.props.expandModule(module);
              }}
         >
             <p className={styles.Title}>{module}</p>

@@ -14,14 +14,10 @@ $margin: 15px;
     -moz-box-shadow: 4px 3px 8px 0px rgba(2,9,9,0.32);
 }
 
-.BackPanel {
+.Outline {
+    outline: 10000px solid rgba(1, 1, 1, 0.8);
+    z-index: 5;
     position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    top: -114px;
-    left: -324px;
-    z-index: 2;
 }
 
 .ExpandedAnnouncement {

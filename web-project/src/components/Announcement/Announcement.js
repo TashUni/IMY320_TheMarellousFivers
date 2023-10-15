@@ -5,7 +5,7 @@ import {Fragment} from "react";
 
 function Announcement(props) {
 
-    const [isExpanded, setExpanded] = useState();
+    const [isExpanded, setExpanded] = useState(false);
 
     const bottomBarStyle = {
         backgroundColor: props.color,
@@ -16,7 +16,8 @@ function Announcement(props) {
         <>
             {
                 !isExpanded &&
-                <div onClick={() => setExpanded(true)} className={styles.Container}>
+
+                <div onClick={() => { setExpanded(true); }} className={styles.Container}>
                     <div className={styles.TopBar}>
                         <h2 className={styles.h2}>{props.heading}</h2>
                         <div className={styles.img}>
@@ -33,39 +34,41 @@ function Announcement(props) {
 
             {
                 isExpanded &&
-                <Fragment>
-                <div className={styles.BackPanel} onClick={() => setExpanded(false)}></div>
-                <div className={styles.ExpandedAnnouncement}>
-                        <div className={styles.TopBarExpanded}>
-                            <h2 className={styles.h2}>{props.heading}</h2>
-                            <div className={`${styles.img} ${styles.expandedImg}`}>
-                                <img alt="profile" src={props.profilePhoto}/>
-                            </div>
-                            <button className={styles.Button} onClick={() => setExpanded(false)}>X</button>
-                        </div>
 
-                        <div className={styles.scrollable}>
-                            <div className={styles.expandedPara}>
-                                {
-                                    props.content.map((el) => {
-                                        return <p className={styles.p}>{el}</p>
-                                    })
-                                }
+                <div className={styles.Outline}>
+                    <div className={styles.ExpandedAnnouncement}>
+                            <div className={styles.TopBarExpanded}>
+                                <h2 className={styles.h2}>{props.heading}</h2>
+                                <div className={`${styles.img} ${styles.expandedImg}`}>
+                                    <img alt="profile" src={props.profilePhoto}/>
+                                </div>
+                                <button className={styles.Button} onClick={() => {
+                                    setExpanded(false);
+                                }}>X</button>
                             </div>
-                            <div className={styles.smallImage}>
-                                {
-                                    props.images.map((el) => {
-                                        console.log(el);
-                                        return <img  alt="annoucement Image" src={require(`./images/imgAnn1.jpeg`)}></img>
-                                    })
-                                }
-                            </div>
-                        </div>
-                        <div style={bottomBarStyle} className={styles.BottomBar}>{props.module}</div>
 
+                            <div className={styles.scrollable}>
+                                <div className={styles.expandedPara}>
+                                    {
+                                        props.content.map((el) => {
+                                            return <p className={styles.p}>{el}</p>
+                                        })
+                                    }
+                                </div>
+                                <div className={styles.smallImage}>
+                                    {
+                                        props.images.map((el) => {
+                                            console.log(el);
+                                            return <img  alt="annoucement Image" src={require(`./images/imgAnn1.jpeg`)}></img>
+                                        })
+                                    }
+                                </div>
+                            </div>
+                            <div style={bottomBarStyle} className={styles.BottomBar}>{props.module}</div>
+
+                    </div>
                 </div>
 
-                </Fragment>
             }
 
 

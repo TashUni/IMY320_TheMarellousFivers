@@ -66,7 +66,7 @@ const data = [
     }
 ];
 
-function Feed() {
+function Feed(props) {
 
     const getAnnouncements = () => {
         let result = [];
