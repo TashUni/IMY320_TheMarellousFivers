@@ -1,0 +1,134 @@
+/* VARIABLES */
+
+:root {
+  --black: #000000;
+  --green: #06d6a0;
+  --blue: #1b9aaa;
+  --red: #ef476f;
+  --light_green: #f8ffe5;
+  --yellow: #ffc43d;
+}
+
+/* BOX SIZING */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* CENTRE EVERYTHING */
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+/* PAGE CONTENTS */
+
+.person_card_list {
+  display: flex;
+  width: 906px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 0 auto 100px auto;
+  height: calc(100vh - 112px);
+  overflow-y: scroll;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  scrollbar-width: none;
+}
+
+.person_card {
+  display: flex;
+  padding: 25px 55px;
+  align-items: center;
+  gap: 50px;
+
+  border-radius: 16px;
+  background: #f8ffe5;
+}
+
+
+.person_card img {
+  width: 146px;
+  height: 146px;
+
+  fill: #d9d9d9;
+}
+
+.text_group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.name {
+  color: var(--Black, #000);
+  leading-trim: both;
+  text-edge: cap;
+
+  /* Heading 2 */
+  font-family: "Roboto";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.96px;
+}
+
+.about {
+  width: 600px;
+
+  color: var(--Black, #000);
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 129.688%; /* 25.938px */
+}
+
+.person_card:nth-child(even) .about {
+  color: var(--Black, #000);
+  text-align: right;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 129.688%; /* 25.938px */
+}
+
+.person_card:nth-child(even) .name {
+  color: var(--Black, #000);
+  text-align: right;
+  leading-trim: both;
+  text-edge: cap;
+
+  /* Heading 2 */
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.96px;
+}
+
+.person_card:nth-child(even) .text_group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+
+.img {
+  object-fit: cover;
+  border-radius: 100%;
+}

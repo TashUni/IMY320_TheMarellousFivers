@@ -3,18 +3,19 @@ import Navbar from "./components/Navbar/Navbar";
 import Profile from './components/Profile/Profile';
 import Feed from "./components/Feed/Feed";
 import Calender from "./components/Calender/Calender";
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 import Module from './components/Module/Module';
 import Todos from "./components/Todos/Todos";
 import InputButton from "./components/InputButton/InputButton";
 import Grades from "./components/Grades/Grades";
 import AllGrades from "./components/AllGrades/AllGrades";
-import ReactDOM from "react-dom/client";
+import AboutUs from "./components/AboutUs/AboutUs";
 
 export const tabs = {
     home: 0,
     modules: 1,
-    profile: 2
+    profile: 2,
+    about: 3
 }
 
 
@@ -27,7 +28,23 @@ function App() {
     const handleChange = (e) => setInputValue(e.target.value);
 
     const [tabSelected, setTabSelected] = useState(tabs.home);
-    const [todos, setTodos] = useState(["Walk the dog"]);
+    const [todos, setTodos] = useState([
+        "Complete Math Assignment",
+        "Attend Computer Science Lecture at 10 AM",
+        "Buy groceries for the week",
+        "Prepare for History Exam on Friday",
+        "Meet with Academic Advisor at 2 PM",
+        "Go for a run in the evening",
+        "Submit Literature Review for Research Project",
+        "Schedule dentist appointment",
+        "Work on Coding Project for Software Engineering Class",
+        "Plan weekend study group session",
+        "Attend Psychology Workshop at 3 PM",
+        "Update Resume for Internship Applications",
+        "Organize study materials for upcoming exams",
+        "Practice guitar for 30 minutes",
+        "Attend Club Meeting at 5 PM"
+    ]);
 
     const [moduleSelected, setModuleSelected] = useState(false);
     const [moduleColor, setModuleColor] = useState();
@@ -465,6 +482,11 @@ function App() {
                     </ul>
                 </div>
             </div>
+        }
+
+        {
+            tabSelected == tabs.about &&
+            <AboutUs/>
         }
 
     </div>

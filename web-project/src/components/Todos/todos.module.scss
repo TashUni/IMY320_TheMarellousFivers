@@ -2,7 +2,7 @@
   background-color: var(--cl-pale);
   margin-left: var(--margin);
   margin-right: var(--margin);
-  margin-bottom: var(--margin);
+  margin-bottom: 15px;
   padding: var(--margin);
   border-radius: var(--border-rad);
   display: flex;
@@ -16,11 +16,26 @@
 }
 
 .todo .button {
-  width: 30%;
+  width: 20%;
+  height: 25px;
 }
 
+.text {
+  display: grid;
+  grid-template-columns: fit-content(20px) 1fr;
+}
+
+.text div:nth-child(1) {
+  padding-right: 7px;
+}
 .todo div {
-  width: 70%;
+  width: 90%;
+}
+
+.scroll {
+  max-height: calc(100vh - 265px);
+  overflow-y: scroll;
+  padding-right: 20px;
 }
 
 .h2 {

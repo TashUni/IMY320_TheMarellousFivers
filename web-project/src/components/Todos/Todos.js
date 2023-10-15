@@ -34,11 +34,14 @@ function Todos(props)  {
     return <div className={styles.UpcomingToday}>
         <div>
             <h2 className={styles.h2}>My Todos</h2>
-            <ul>
+            <ul className={styles.scroll}>
                 {
                     props.todos.map((el, index) => {
                         return <div className={styles.todo}>
-                            <div>{index + 1}. {el}</div>
+                            <div className={styles.text}>
+                                <div>{index + 1}.</div>
+                                <div>{el}</div>
+                            </div>
                             <button className={styles.button} onClick={() => {
                                 deleteTodo(index)
                             }}>done

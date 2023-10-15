@@ -38,6 +38,25 @@ p, h2{
   animation-delay: 0.4s !important;
 }
 
+#tash {
+  background: #06D6A0;
+
+}
+
+#monica {
+  background: #1B9AAA;
+}
+
+#mark {
+  background: #EF476F;
+
+}
+
+#tom {
+  background: #FFC43D;
+
+}
+
 .fade-in-and-move {
   opacity: 0;
   transform: translateY(-50px); /* Move the div 20px up initially */
