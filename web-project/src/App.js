@@ -87,23 +87,162 @@ function App() {
     const modules = [
         {
             name: "COS301",
-            announcements: ["No class Today!!!"],
-            nextDeadlines: ["3 May - Project"]
+            announcements: [
+                {
+                    heading: "No class Today!!!",
+                    content: "I've decided to not have class today, have a nice time",
+                    date: "10 January"
+                },
+                {
+                    heading: "I'm done with you guys!",
+                    content: "It's almost the end of the year, so bugger off!",
+                    date: "15 February"
+                },
+                {
+                    heading: "Boom Boom, the test is near!!!",
+                    content: "All fear me, the test is near!!!\nYou will regret it if you dont' study",
+                    date: "20 March"
+                }
+            ],
+            nextDeadlines: [
+                "10 April - Literature Review Deadline",
+                "27 May - Case Study Submission",
+                "15 July - Group Presentation",
+                "08 September - Coding Challenge Due Date",
+                "19 October - Research Proposal Submission",
+                "12 November - Online Exam Deadline",
+                "02 December - Final Report Submission"
+            ]
         },
         {
             name: "COS333",
-            announcements: ["Next programming practical has been postponed"],
-            nextDeadlines: ["12 May - Read chapter 1"]
+            announcements: [
+                {
+                    heading: "Next programming practical has been postponed",
+                    content: "Have a break! Have a kitkat",
+                    date: "5 April"
+                },
+                {
+                    heading: "Exciting News for Coders!",
+                    content: "New programming languages workshop this Saturday!\nDon't miss it!",
+                    date: "12 April"
+                },
+                {
+                    heading: "Important Update: Python Bootcamp",
+                    content: "Python Bootcamp sessions have been rescheduled.\nCheck your email for details.",
+                    date: "18 April"
+                },
+                {
+                    heading: "JavaScript Fundamentals Workshop",
+                    content: "Learn the basics of JavaScript programming language.\nJoin us on 25th April!",
+                    date: "25 April"
+                }
+            ],
+            nextDeadlines: [
+                "10 April - Literature Review Deadline",
+                "27 May - Case Study Submission",
+                "15 July - Group Presentation",
+                "08 September - Coding Challenge Due Date",
+                "19 October - Research Proposal Submission",
+                "12 November - Online Exam Deadline",
+                "02 December - Final Report Submission"]
         },
         {
             name: "IMY320",
-            announcements: ["More work! (We are trying to overtake 301)", "The lecturers need a break..."],
-            nextDeadlines: ["4 May - Individual assignment"]
+            announcements: [
+                {
+                    heading: "Yasss",
+                    content: "More work! (We are trying to overtake 301)"
+                },
+                {
+                    heading: "The lecturers need a break...",
+                    content: "Go home and have a party. I'll mark you tests later."
+                },
+                {
+                    heading: "IMY320 Workshop Postponed",
+                    content: "Due to unforeseen circumstances, the UX/UI workshop scheduled for this week has been postponed. Stay tuned for the updated schedule.",
+                    date: "3 May"
+                },
+                {
+                    heading: "Exciting News for UX/UI Enthusiasts!",
+                    content: "New module resources added to the IMY320 online portal.\nExplore the latest design trends and tools!",
+                    date: "8 May"
+                },
+                {
+                    heading: "Guest Speaker Session: Interaction Design Experts",
+                    content: "Join us on 15th May for an insightful session with industry experts in interaction design. Learn from the best!",
+                    date: "10 May"
+                },
+                {
+                    heading: "IMY320 Project Showcase",
+                    content: "Get ready for the IMY320 project showcase event on 22nd May. Present your innovative UX/UI designs and impress the audience!",
+                    date: "17 May"
+                },
+                {
+                    heading: "User Testing Workshop",
+                    content: "Enhance your UX/UI skills by attending our user testing workshop on 27th May. Learn practical techniques for effective user feedback.",
+                    date: "20 May"
+                },
+                {
+                    heading: "Design Challenge Announcement",
+                    content: "Participate in the IMY320 design challenge and stand a chance to win exciting prizes! Challenge details will be shared soon.",
+                    date: "25 May"
+                }],
+            nextDeadlines: [
+                "12 May - Research Paper Submission",
+                "18 June - Group Project Presentation",
+                "05 August - Online Quiz Deadline",
+                "22 September - Lab Report Due Date",
+                "08 October - Coding Assignment Submission",
+                "16 November - Final Project Proposal",
+                "03 December - Thesis Defense"
+            ]
         },
         {
             name: "WTW164",
-            announcements: ["Math ain't mathing this week guys! I'm taking a break from this. Kind regards, your lecturer."],
-            nextDeadlines: ["Absolutely nada"]
+            announcements: [
+                {
+                    heading: "Calculus Quiz Reminder",
+                    content: "Friendly reminder: The Calculus quiz is scheduled for this Friday. Make sure to review your derivatives and integrals!",
+                    date: "7 June"
+                },
+                {
+                    heading: "Calculus Problem Solving Workshop",
+                    content: "Join us on 12th June for a problem-solving workshop. We'll tackle challenging calculus problems together. Don't miss out!",
+                    date: "10 June"
+                },
+                {
+                    heading: "Guest Lecture by Renowned Mathematician",
+                    content: "Exciting news! A renowned mathematician will deliver a guest lecture on advanced calculus concepts on 17th June. Be prepared for mind-expanding ideas!",
+                    date: "14 June"
+                },
+                {
+                    heading: "Calculus Lab Sessions Begin",
+                    content: "Starting 20th June, we will have weekly lab sessions to explore real-life applications of calculus. Get ready for hands-on learning!",
+                    date: "17 June"
+                },
+                {
+                    heading: "Calculus Revision Marathon",
+                    content: "Prepare for your upcoming calculus exams by joining our revision marathon on 25th June. We'll cover all major topics and answer your questions.",
+                    date: "22 June"
+                },
+                {
+                    heading: "Calculus Final Exam Date Announced",
+                    content: "The Calculus final exam is scheduled for 30th June. Start your preparations early and reach out to us if you need additional study resources.",
+                    date: "27 June"
+                }],
+            nextDeadlines: [
+                "20 October - Assignment 1 Due Date",
+                "25 October - Quiz 1 Deadline",
+                "05 November - Midterm Exam Date",
+                "10 November - Project Proposal Submission",
+                "15 November - Assignment 2 Due Date",
+                "20 November - Quiz 2 Deadline",
+                "25 November - Guest Lecture on Module Topic",
+                "05 December - Final Project Presentation",
+                "10 December - Revision Session for Final Exam",
+                "15 December - Final Exam Date"
+            ]
         }
     ];
 
@@ -258,7 +397,7 @@ function App() {
                     <div className={styles.ModulesContainer}>
                         {
                             modules.map((el, index) => {
-                                return <Module module={el.name} announcements={el.announcements}
+                                return <Module fadeClass={`fade-in-and-move delay ${index + 1}`} module={el.name} announcements={el.announcements}
                                                nextDeadlines={el.nextDeadlines} index={index % 4} expandModule={expandModule}/>
                             })
                         }
@@ -273,6 +412,31 @@ function App() {
                             setModuleSelected(false);
                         }}>X</button>
                         <h2>{expandedModule.name}</h2>
+                        <div className={styles.divide}>
+                            <div>
+                                <h3>Announcements</h3>
+                                <div className={styles.scroll}>
+                                {
+                                    expandedModule.announcements.map((el) => {
+                                        return <div class={styles.ExpandedAnnoucement}>
+                                            <div>{el.heading}</div>
+                                            <div>{el.content}</div>
+                                            <div>{el.date}</div>
+                                        </div>
+                                    })
+                                }</div>
+                            </div>
+                            <div>
+                                <h3>Deadlines</h3>
+                                <ul>
+                                {
+                                    expandedModule.nextDeadlines.map((el) => {
+                                        return <li className={styles.ExpandedDeadline}>{el}</li>
+                                    })
+                                }
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
                 }

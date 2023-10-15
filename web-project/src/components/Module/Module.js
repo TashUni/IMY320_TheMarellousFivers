@@ -20,7 +20,7 @@ function Module({announcements, nextDeadlines, module, index, expandModule}) {
     }
 
     return(
-        <div className={[styles.Container, styles[translateIndex(index % 4)] ].join(' ')}
+        <div className={[styles.Container, styles[translateIndex(index % 4)],  `fade-in-and-move delay${index + 1}` ].join(' ')}
              style={{
                  borderLeft: `10px solid`,
                  borderColor: colors[module].normal,
@@ -38,8 +38,8 @@ function Module({announcements, nextDeadlines, module, index, expandModule}) {
                     <p>Latest Announcements: </p>
                     <ul>
                         {
-                            announcements.map((el) => {
-                                return <li>{el}</li>
+                            announcements.slice(0, 2).map((el) => {
+                                return <li>{el.heading}</li>
                             })
                         }
                     </ul>
@@ -51,7 +51,7 @@ function Module({announcements, nextDeadlines, module, index, expandModule}) {
                     <p>Next Deadlines: </p>
                     <ul>
                         {
-                            nextDeadlines.map((el) => {
+                            nextDeadlines.slice(0, 2).map((el) => {
                                 return <li>{el}</li>
                             })
                         }

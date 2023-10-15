@@ -1,17 +1,17 @@
 let colors = {
     "IMY320": {
         normal: "#b9be1a",
-        pale: "rgb(231,220,173)",
+        pale: "rgb(236,226,185)",
         whiteText: false,
     },
     "COS333": {
         normal: "#3ca43b",
-        pale: "rgb(170,227,170)",
+        pale: "rgb(198,241,198)",
         whiteText: true,
     },
     "WTW164": {
         normal: "#0e9393",
-        pale: "rgb(172,238,225)",
+        pale: "rgb(184,238,227)",
         whiteText: true,
     },
     "COS301": {
