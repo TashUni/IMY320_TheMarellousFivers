@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  scrollbar-color: var(--cl-blue) var(--cl-very-pale);
 }
 
 .todo {

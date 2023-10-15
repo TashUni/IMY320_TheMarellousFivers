@@ -11,10 +11,10 @@ function Navbar({setTabSelected}) {
             <div className={s.Navbar}>
                 <img alt={"website logo"} src={logo} className={s.img}/>
                 <ul className={s.ul}>
-                    <li onClick={() => setTabSelected(tabs.home)}>home</li>
-                    <li onClick={() => setTabSelected(tabs.modules)}>modules</li>
-                    <li onClick={() => setTabSelected(tabs.profile)}>profile</li>
-                    <li onClick={() => setTabSelected(tabs.about)}>about</li>
+                    <li className={s.li} onClick={() => setTabSelected(tabs.home)}>home</li>
+                    <li className={s.li}  onClick={() => setTabSelected(tabs.modules)}>modules</li>
+                    <li className={s.li}  onClick={() => setTabSelected(tabs.profile)}>profile</li>
+                    <li className={s.li}  onClick={() => setTabSelected(tabs.about)}>about</li>
                 </ul>
             </div>
         </Fragment>

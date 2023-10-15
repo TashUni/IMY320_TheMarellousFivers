@@ -31,7 +31,8 @@ function Todos(props)  {
 
 
 
-    return <div className={styles.UpcomingToday}>
+    // className={`${styles.Information} fade-in-and-move delay3`
+    return <div className={`${styles.UpcomingToday} fade-in-and-move delay1`}>
         <div>
             <h2 className={styles.h2}>My Todos</h2>
             <ul className={styles.scroll}>

@@ -5,6 +5,10 @@
   flex-grow: 1;
 }
 
+.li:hover {
+  color:  var(--cl-blue)
+}
+
 .img {
   width: 120px;
 }

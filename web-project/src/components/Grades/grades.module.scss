@@ -1,13 +1,13 @@
 .Container {
   background-color: #b8e5ee;
   border: var(--border-width) solid var(--cl-blue);
-  margin-bottom: var(--margin);
   border-radius: var(--border-rad);
   padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   line-height: 1;
+  height: calc(100vh - 131px);
 }
 
 .button {

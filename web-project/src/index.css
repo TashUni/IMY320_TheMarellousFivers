@@ -77,3 +77,24 @@ button {
   background-color: var(--cl-pale-blue);
   cursor: pointer;
 }
+
+/* Works on Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--cl-blue) var(--cl-very-pale);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: orange;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--cl-very-pale);
+  border-radius: 20px;
+  border: 3px solid orange;
+}

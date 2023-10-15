@@ -3,19 +3,21 @@ import Navbar from "./components/Navbar/Navbar";
 import Profile from './components/Profile/Profile';
 import Feed from "./components/Feed/Feed";
 import Calender from "./components/Calender/Calender";
-import React, {useEffect, useState} from "react";
+import {useEffect, useState, Fragment} from "react";
 import Module from './components/Module/Module';
 import Todos from "./components/Todos/Todos";
 import InputButton from "./components/InputButton/InputButton";
 import Grades from "./components/Grades/Grades";
 import AllGrades from "./components/AllGrades/AllGrades";
 import AboutUs from "./components/AboutUs/AboutUs";
+import Splash from "./components/Splash/Splash";
 
 export const tabs = {
     home: 0,
     modules: 1,
     profile: 2,
-    about: 3
+    about: 3,
+    splash: 4
 }
 
 
@@ -27,7 +29,7 @@ function App() {
     const [inputValue, setInputValue] = useState("");
     const handleChange = (e) => setInputValue(e.target.value);
 
-    const [tabSelected, setTabSelected] = useState(tabs.home);
+    const [tabSelected, setTabSelected] = useState(tabs.splash);
     const [todos, setTodos] = useState([
         "Complete Math Assignment",
         "Attend Computer Science Lecture at 10 AM",
@@ -360,134 +362,147 @@ function App() {
 
     return (
     <div className={styles.Body}>
-        <Navbar setTabSelected={setTabSelected} />
 
         {
-            tabSelected === tabs.home &&
-            <React.Fragment>
+            tabSelected === tabs.splash &&
+            <Splash/>
+        }
 
-                <div className={styles.Container}>
+        {
+            tabSelected != tabs.splash &&
+            <Fragment>
+                <Navbar setTabSelected={setTabSelected} />
 
-                    <div className={styles.CalenderBox}>
-                        <Calender events={events} setDate={setDate}/>
-                        <div className={`${styles.EventContainer} fade-in-and-move delay4`}>
-                            <div>
-                                <p className={styles.EventContainerPara}>Events on <u>{date.toDateString()}:</u></p>
+                {
+                    tabSelected === tabs.home &&
+                    <Fragment>
 
+                        <div className={styles.Container}>
+
+                            <div className={styles.CalenderBox}>
+                                <Calender events={events} setDate={setDate}/>
+                                <div className={`${styles.EventContainer} fade-in-and-move delay4`}>
+                                    <div>
+                                        <p className={styles.EventContainerPara}>Events on <u>{date.toDateString()}:</u></p>
+
+                                        {
+                                            selectedEvents.length === 0 ?
+                                                <p className={styles.noEvents}>No events</p> :
+                                                <ul className={styles.ul}>
+                                                    {
+                                                        selectedEvents.map((el) => {
+                                                            return <li>{el.name}</li>
+                                                        })
+                                                    }
+                                                </ul>
+                                        }
+                                    </div>
+
+                                    <InputButton value={inputValue} onChange={handleChange} onClick={() => {
+                                        addEvent();
+                                    }} buttonText={"Add Event"}/>
+
+                                </div>
+                            </div>
+
+                            <Grades grades={grades} seeAllGrades={seeAllGrades}/>
+
+                            <Feed/>
+
+                        </div>
+
+
+
+                    </Fragment>
+                }
+
+                {
+                    tabSelected === tabs.modules &&
+                    <div className={styles.ModulesPage}>
+
+                        {
+                            !moduleSelected &&
+                            <div className={styles.ModulesContainer}>
                                 {
-                                    selectedEvents.length === 0 ?
-                                        <p className={styles.noEvents}>No events</p> :
-                                        <ul className={styles.ul}>
+                                    modules.map((el, index) => {
+                                        return <Module fadeClass={`fade-in-and-move delay ${index + 1}`} module={el.name} announcements={el.announcements}
+                                                       nextDeadlines={el.nextDeadlines} index={index % 4} expandModule={expandModule}/>
+                                    })
+                                }
+                            </div>
+
+                        }
+
+                        {
+                            moduleSelected &&
+                            <div className={styles.SelectedModule} style={{backgroundColor: moduleColor, borderLeft: `10px solid ${moduleHighlight}`}}>
+                                <button className={styles.Button} onClick={() => {
+                                    setModuleSelected(false);
+                                }}>X</button>
+                                <h2>{expandedModule.name}</h2>
+                                <div className={styles.divide}>
+                                    <div>
+                                        <h3>Announcements</h3>
+                                        <div className={styles.scroll}>
                                             {
-                                                selectedEvents.map((el) => {
-                                                    return <li>{el.name}</li>
+                                                expandedModule.announcements.map((el) => {
+                                                    return <div class={styles.ExpandedAnnoucement}>
+                                                        <div>{el.heading}</div>
+                                                        <div>{el.content}</div>
+                                                        <div>{el.date}</div>
+                                                    </div>
+                                                })
+                                            }</div>
+                                    </div>
+                                    <div>
+                                        <h3>Deadlines</h3>
+                                        <ul>
+                                            {
+                                                expandedModule.nextDeadlines.map((el) => {
+                                                    return <li className={styles.ExpandedDeadline}>{el}</li>
                                                 })
                                             }
                                         </ul>
-                                }
+                                    </div>
+                                </div>
                             </div>
 
-                            <InputButton value={inputValue} onChange={handleChange} onClick={() => {
-                                addEvent();
-                            }} buttonText={"Add Event"}/>
-
-                        </div>
-                    </div>
-
-                    <Grades grades={grades} seeAllGrades={seeAllGrades}/>
-
-                    <Feed/>
-
-                </div>
-
-
-
-            </React.Fragment>
-        }
-
-        {
-            tabSelected === tabs.modules &&
-            <div className={styles.ModulesPage}>
-
-                {
-                    !moduleSelected &&
-                    <div className={styles.ModulesContainer}>
-                        {
-                            modules.map((el, index) => {
-                                return <Module fadeClass={`fade-in-and-move delay ${index + 1}`} module={el.name} announcements={el.announcements}
-                                               nextDeadlines={el.nextDeadlines} index={index % 4} expandModule={expandModule}/>
-                            })
                         }
-                    </div>
 
+
+                        <Todos todos={todos} setTodos={setTodos}/>
+                    </div>
+                }
+
+
+                {
+                    tabSelected === tabs.profile &&
+                    <div className={styles.Container}>
+                        <Profile/>
+                        <AllGrades grades={grades}/>
+                        <div className={`${styles.Information} fade-in-and-move delay3`}>
+                            <h2>Registration information</h2>
+
+                            <p className={styles.bold}>Fees due</p>
+                            <p>R100 000 000</p>
+
+                            <p className={styles.bold}>Holds</p>
+                            <ul>
+                                <li><p>We still need a model for the BA students, and you look too good for use to pass you yet.</p></li>
+                                <li><p>Also we need tutors for next year.</p></li>
+                            </ul>
+                        </div>
+                    </div>
                 }
 
                 {
-                    moduleSelected &&
-                    <div className={styles.SelectedModule} style={{backgroundColor: moduleColor, borderLeft: `10px solid ${moduleHighlight}`}}>
-                        <button className={styles.Button} onClick={() => {
-                            setModuleSelected(false);
-                        }}>X</button>
-                        <h2>{expandedModule.name}</h2>
-                        <div className={styles.divide}>
-                            <div>
-                                <h3>Announcements</h3>
-                                <div className={styles.scroll}>
-                                {
-                                    expandedModule.announcements.map((el) => {
-                                        return <div class={styles.ExpandedAnnoucement}>
-                                            <div>{el.heading}</div>
-                                            <div>{el.content}</div>
-                                            <div>{el.date}</div>
-                                        </div>
-                                    })
-                                }</div>
-                            </div>
-                            <div>
-                                <h3>Deadlines</h3>
-                                <ul>
-                                {
-                                    expandedModule.nextDeadlines.map((el) => {
-                                        return <li className={styles.ExpandedDeadline}>{el}</li>
-                                    })
-                                }
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
+                    tabSelected == tabs.about &&
+                    <AboutUs/>
                 }
-
-
-                <Todos todos={todos} setTodos={setTodos}/>
-            </div>
+            </Fragment>
         }
 
 
-        {
-            tabSelected === tabs.profile &&
-            <div className={styles.Container}>
-                <Profile/>
-                <AllGrades grades={grades}/>
-                <div className={styles.Information}>
-                    <h2>Registration information</h2>
-
-                    <p className={styles.bold}>Fees due</p>
-                    <p>R100 000 000</p>
-
-                    <p className={styles.bold}>Holds</p>
-                    <ul>
-                        <li><p>We still need a model for the BA students, and you look too good for use to pass you yet.</p></li>
-                        <li><p>Also we need tutors for next year.</p></li>
-                    </ul>
-                </div>
-            </div>
-        }
-
-        {
-            tabSelected == tabs.about &&
-            <AboutUs/>
-        }
 
     </div>
   );

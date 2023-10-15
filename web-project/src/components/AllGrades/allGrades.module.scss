@@ -6,6 +6,7 @@
   margin-left: var(--margin);
   max-height: calc(100vh - 130px);
   overflow-y: scroll;
+  scrollbar-color: var(--cl-blue) var(--cl-very-pale);
 }
 
 .Submitted {

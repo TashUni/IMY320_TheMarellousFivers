@@ -8,11 +8,13 @@ import tom from './images/tom.jpg';
 import mon from './images/monica.jpg';
 
 import Navbar from "../Navbar/Navbar";
+import styles from "../../App.module.scss";
 
 function AboutUs() {
     return (
         <div className={s.person_card_list}>
-            <div className={s.person_card} id="matt">
+
+            <div className={`${s.person_card} fade-in-and-move delay1`} id="matt">
                 <img
                     className={s.img}
 
@@ -28,7 +30,7 @@ function AboutUs() {
                 </div>
             </div>
 
-            <div className={s.person_card} id="tash">
+            <div className={`${s.person_card} fade-in-and-move delay2`} id="tash">
 
                 <div className={s.text_group}>
                     <div className={s.name}>Latasha Friend</div>
@@ -44,7 +46,7 @@ function AboutUs() {
                 />
             </div>
 
-            <div className={s.person_card} id="monica">
+            <div className={`${s.person_card} fade-in-and-move delay3`} id="monica">
                 <img
                     className={s.img}
                     src={mon}
@@ -59,7 +61,7 @@ function AboutUs() {
                 </div>
             </div>
 
-            <div className={s.person_card} id="mark">
+            <div className={`${s.person_card} fade-in-and-move delay4`} id="mark">
 
                 <div className={s.text_group}>
                     <div className={s.name}>Mark Grosvenor</div>
@@ -75,7 +77,7 @@ function AboutUs() {
                 />
             </div>
 
-            <div className={s.person_card} id="tom">
+            <div className={`${s.person_card} fade-in-and-move delay4`} id="tom">
                 <img
                     className={s.img}
                     src={tom}

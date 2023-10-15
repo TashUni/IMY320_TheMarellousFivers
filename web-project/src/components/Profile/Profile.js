@@ -4,7 +4,7 @@ import photo from './profile.png';
 
 function Profile() {
     return (
-        <div className={s.Container}>
+        <div className={`${s.Container} fade-in-and-move delay1`}>
             <img alt="profile" className={s.img} src={photo} />
             <h2>Human Person</h2>
             <p className={s.p}>Registration Status</p>

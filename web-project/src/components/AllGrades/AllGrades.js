@@ -3,7 +3,8 @@ import React from "react";
 
 function AllGrades(props) {
     return (
-        <div className={s.Container}>
+        //className={`${style.Container} fade-in-and-move delay1`}
+        <div className={`${s.Container} fade-in-and-move delay2`}>
             <h2 className={s.h2}>All Grades</h2>
             <div className={s.GradesContainer}>
 
