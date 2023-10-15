@@ -42,9 +42,11 @@ function Announcement(props) {
                                 <div className={`${styles.img} ${styles.expandedImg}`}>
                                     <img alt="profile" src={props.profilePhoto}/>
                                 </div>
+
                                 <button className={styles.Button} onClick={() => {
                                     setExpanded(false);
                                 }}>X</button>
+
                             </div>
 
                             <div className={styles.scrollable}>

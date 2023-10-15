@@ -17,6 +17,7 @@ export const tabs = {
     profile: 2
 }
 
+
 function App() {
 
     const [date, setDate] = useState(new Date());
@@ -29,6 +30,7 @@ function App() {
     const [todos, setTodos] = useState(["Walk the dog"]);
 
     const [moduleSelected, setModuleSelected] = useState(false);
+    const [moduleColor, setModuleColor] = useState();
 
 
     useEffect(() => {
@@ -172,9 +174,13 @@ function App() {
         }
     ]
 
-    const expandModule = (name) => {
+    const expandModule = (name, color) => {
         console.log("expanding module...");
         console.log(name);
+        console.log(color);
+
+        setModuleSelected(true);
+        setModuleColor(color);
 
 
     }
@@ -227,26 +233,37 @@ function App() {
         }
 
         {
-            tabSelected === tabs.modules && !moduleSelected &&
+            tabSelected === tabs.modules &&
             <div className={styles.ModulesPage}>
-                <div className={styles.ModulesContainer}>
-                    {
-                        modules.map((el, index) => {
-                            return <Module module={el.name} announcements={el.announcements}
-                                           nextDeadlines={el.nextDeadlines} index={index % 4} expandModule={expandModule}/>
-                        })
-                    }
-                </div>
+
+                {
+                    !moduleSelected &&
+                    <div className={styles.ModulesContainer}>
+                        {
+                            modules.map((el, index) => {
+                                return <Module module={el.name} announcements={el.announcements}
+                                               nextDeadlines={el.nextDeadlines} index={index % 4} expandModule={expandModule}/>
+                            })
+                        }
+                    </div>
+
+                }
+
+                {
+                    moduleSelected &&
+                    <div className={styles.SelectedModule} style={{backgroundColor: moduleColor}}>
+                        <button className={styles.Button} onClick={() => {
+                            setModuleSelected(false);
+                        }}>X</button>
+                    </div>
+
+                }
+
+
                 <Todos todos={todos} setTodos={setTodos}/>
             </div>
         }
 
-        {
-            tabSelected === tabs.modules && moduleSelected &&
-            <div className={styles.SelectedModule}>
-                I am a selected module!!!!
-            </div>
-        }
 
         {
             tabSelected === tabs.profile &&

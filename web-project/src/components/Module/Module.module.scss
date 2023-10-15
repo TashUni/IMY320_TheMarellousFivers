@@ -1,15 +1,18 @@
+$margin: 15px;
+
 .Container {
-  margin: var(--margin);
-  margin-left: 0;
-  margin-top: 0;
+  background-color: var(--cl-pale);
+  margin: $margin;
+  padding-top: $margin;
   border-radius: var(--border-rad);
-  padding: var(--margin);
+  transition: box-shadow 0.3s ease-in-out;
+  padding-left: var(--margin);
 }
 
 .Container:hover {
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 4px 3px 8px 0px rgba(2,9,9,0.32);
+  -webkit-box-shadow: 4px 3px 8px 0px rgba(2,9,9,0.32);
+  -moz-box-shadow: 4px 3px 8px 0px rgba(2,9,9,0.32);
 }
 
 .Title {

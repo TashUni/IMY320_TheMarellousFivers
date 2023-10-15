@@ -3,7 +3,7 @@ import a from '../../App.module.scss';
 import colors from "../colors";
 import React from "react";
 
-function Module({announcements, nextDeadlines, module, index}) {
+function Module({announcements, nextDeadlines, module, index, expandModule}) {
 
     const translateIndex = (index) => {
         switch (index) {
@@ -28,7 +28,7 @@ function Module({announcements, nextDeadlines, module, index}) {
              }}
 
              onClick={() => {
-                 this.props.expandModule(module);
+                 expandModule(module, colors[module].pale);
              }}
         >
             <p className={styles.Title}>{module}</p>
