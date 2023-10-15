@@ -31,7 +31,7 @@ function Grades(props) {
 
                             </div>
 
-                            <hr/>
+                            <hr className={s.hr}/>
 
                             </React.Fragment>
                         )

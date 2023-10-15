@@ -57,6 +57,8 @@ function App() {
         setInputValue("");
         setEvents((prevEvents) => [...prevEvents, newEvent]);
         setSelectedEvents((prevEvents) => [...prevEvents, newEvent]);
+
+        console.log(events.length);
     }
 
     const [events, setEvents] = useState([
