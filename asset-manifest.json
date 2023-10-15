@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.css": "/IMY320_TheMarellousFivers/static/css/main.fb66a337.css",
-    "main.js": "/IMY320_TheMarellousFivers/static/js/main.4e14336b.js",
+    "main.css": "/IMY320_TheMarellousFivers/static/css/main.4fd83e1a.css",
+    "main.js": "/IMY320_TheMarellousFivers/static/js/main.ecd85bc0.js",
     "static/js/787.f441ebf0.chunk.js": "/IMY320_TheMarellousFivers/static/js/787.f441ebf0.chunk.js",
+    "static/media/tash.jpg": "/IMY320_TheMarellousFivers/static/media/tash.e40a9d4c1b90b8dec1c3.jpg",
     "static/media/Roboto-LightItalic.ttf": "/IMY320_TheMarellousFivers/static/media/Roboto-LightItalic.c590382422f2742d788b.ttf",
     "static/media/Roboto-Light.ttf": "/IMY320_TheMarellousFivers/static/media/Roboto-Light.333da16a3f3cc391d087.ttf",
+    "static/media/matt.jpg": "/IMY320_TheMarellousFivers/static/media/matt.f0ab64289d56b0818ef8.jpg",
+    "static/media/tom.jpg": "/IMY320_TheMarellousFivers/static/media/tom.be249f34bb73df00b1ce.jpg",
     "static/media/CabinetGrotesk-Variable.ttf": "/IMY320_TheMarellousFivers/static/media/CabinetGrotesk-Variable.5d8b44553adc33857c97.ttf",
     "static/media/imgAnn1.jpeg": "/IMY320_TheMarellousFivers/static/media/imgAnn1.803d572daef5a5c3d692.jpeg",
     "static/media/3.svg": "/IMY320_TheMarellousFivers/static/media/3.5b95fef269d7f4dbe441.svg",
@@ -13,14 +16,15 @@
     "static/media/1.svg": "/IMY320_TheMarellousFivers/static/media/1.365194a1fe367f8b4887.svg",
     "static/media/4.svg": "/IMY320_TheMarellousFivers/static/media/4.648ef4263edab8dbcca2.svg",
     "static/media/profile-3.jpeg": "/IMY320_TheMarellousFivers/static/media/profile-3.77b5f4b45dc54e1c4767.jpeg",
+    "static/media/monica.jpg": "/IMY320_TheMarellousFivers/static/media/monica.feac1507e3db1e710fff.jpg",
     "static/media/logo.svg": "/IMY320_TheMarellousFivers/static/media/logo.7ccfccc3a7a004ec7283f65440863380.svg",
     "index.html": "/IMY320_TheMarellousFivers/index.html",
-    "main.fb66a337.css.map": "/IMY320_TheMarellousFivers/static/css/main.fb66a337.css.map",
-    "main.4e14336b.js.map": "/IMY320_TheMarellousFivers/static/js/main.4e14336b.js.map",
+    "main.4fd83e1a.css.map": "/IMY320_TheMarellousFivers/static/css/main.4fd83e1a.css.map",
+    "main.ecd85bc0.js.map": "/IMY320_TheMarellousFivers/static/js/main.ecd85bc0.js.map",
     "787.f441ebf0.chunk.js.map": "/IMY320_TheMarellousFivers/static/js/787.f441ebf0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb66a337.css",
-    "static/js/main.4e14336b.js"
+    "static/css/main.4fd83e1a.css",
+    "static/js/main.ecd85bc0.js"
   ]
 }
