@@ -22,6 +22,35 @@ p, h2{
   line-height: 1.5;
 }
 
+.delay1 {
+  animation-delay: 0.1s !important;
+}
+
+.delay2 {
+  animation-delay: 0.2s !important;
+}
+
+.delay3 {
+  animation-delay: 0.3s !important;
+}
+
+.delay4 {
+  animation-delay: 0.4s !important;
+}
+
+.fade-in-and-move {
+  opacity: 0;
+  transform: translateY(-50px); /* Move the div 20px up initially */
+  animation: fadeInAndMove 1s ease forwards; /* Animation duration, timing function, and fill mode */
+  position: relative;
+}
+
+@keyframes fadeInAndMove {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move the div to its original position */
+  }
+}
 
 button {
   border: none;

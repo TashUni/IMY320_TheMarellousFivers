@@ -34,7 +34,7 @@ function Calender({events, setDate}) {
     }
 
     return (
-        <div>
+        <div className={"fade-in-and-move delay2"}>
             <Calendar onChange={onChange} value={value} tileContent={getTiles} />
         </div>
     );

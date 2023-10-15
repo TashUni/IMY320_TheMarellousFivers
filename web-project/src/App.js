@@ -26,7 +26,7 @@ function App() {
 
 
     const [tabSelected, setTabSelected] = useState(tabs.home);
-    const [todos, setTodos] = useState(["Walk the dog"])
+    const [todos, setTodos] = useState(["Walk the dog"]);
 
     useEffect(() => {
         //loop through events and select the ones that are the same date
@@ -168,6 +168,7 @@ function App() {
             ]
         }
     ]
+
     return (
     <div className={styles.Body}>
         <Navbar setTabSelected={setTabSelected} />
@@ -177,31 +178,33 @@ function App() {
                 <div className={styles.Container}>
                 <Grades grades={grades} seeAllGrades={seeAllGrades}/>
                 <Feed />
+
+
                 <div className={styles.CalenderBox}>
                     <Calender events={events} setDate={setDate}/>
-                    <div className={styles.EventContainer}>
-                        <div>
-                            <p className={styles.EventContainerPara}>Events on <u>{date.toDateString()}:</u></p>
+                        <div className={`${styles.EventContainer} fade-in-and-move delay4`}>
+                            <div>
+                                <p className={styles.EventContainerPara}>Events on <u>{date.toDateString()}:</u></p>
 
-                            {
-                                selectedEvents.length === 0 ?
-                                    <p className={styles.noEvents}>No events</p> :
-                                    <ul className={styles.ul}>
-                                        {
-                                            selectedEvents.map((el) => {
-                                                return <li>{el.name}</li>
-                                            })
-                                        }
-                                    </ul>
-                            }
+                                {
+                                    selectedEvents.length === 0 ?
+                                        <p className={styles.noEvents}>No events</p> :
+                                        <ul className={styles.ul}>
+                                            {
+                                                selectedEvents.map((el) => {
+                                                    return <li>{el.name}</li>
+                                                })
+                                            }
+                                        </ul>
+                                }
+                            </div>
+
+                            <InputButton value={inputValue} onChange={handleChange} onClick={() => {
+                                addEvent();
+                            }} buttonText={"Add Event"}/>
+
                         </div>
-
-                        <InputButton value={inputValue} onChange={handleChange} onClick={() => {
-                            addEvent();
-                        }} buttonText={"Add Event"}/>
-
                     </div>
-                </div>
             </div>
         }
 

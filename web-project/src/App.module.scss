@@ -54,6 +54,7 @@
 .CalenderBox {
   display: grid;
   grid-template-rows: auto 1fr;
+  z-index: -1;
 }
 
 .InnerContent {
@@ -72,6 +73,7 @@
   justify-content: space-between;
   width: calc(100% - 10px - var(--margin));
 }
+
 
 .ul {
   font-family: var(--font-paragraph);

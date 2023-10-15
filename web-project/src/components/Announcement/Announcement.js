@@ -36,7 +36,6 @@ function Announcement(props) {
                 <Fragment>
                 <div className={styles.BackPanel} onClick={() => setExpanded(false)}></div>
                 <div className={styles.ExpandedAnnouncement}>
-                    <div className={styles.InnerContent}>
                         <div className={styles.TopBarExpanded}>
                             <h2 className={styles.h2}>{props.heading}</h2>
                             <div className={`${styles.img} ${styles.expandedImg}`}>
@@ -63,7 +62,7 @@ function Announcement(props) {
                             </div>
                         </div>
                         <div style={bottomBarStyle} className={styles.BottomBar}>{props.module}</div>
-                    </div>
+
                 </div>
 
                 </Fragment>

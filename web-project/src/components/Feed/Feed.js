@@ -89,13 +89,12 @@ function Feed() {
     }
 
     return(
-        <div className={style.Container}>
-            <h2 className={style.Heading}>Your Feed.</h2>
-            <div className={style.ModuleContainer}>
-                {getAnnouncements()}
+            <div className={`${style.Container} fade-in-and-move delay1`}>
+                <h2 className={style.Heading}>Your Feed.</h2>
+                <div className={style.ModuleContainer}>
+                    {getAnnouncements()}
+                </div>
             </div>
-
-        </div>
     )
 }
 
