@@ -171,11 +171,13 @@ function App() {
             announcements: [
                 {
                     heading: "Yasss",
-                    content: "More work! (We are trying to overtake 301)"
+                    content: "More work! (We are trying to overtake 301)",
+                    date: "3 May"
                 },
                 {
                     heading: "The lecturers need a break...",
-                    content: "Go home and have a party. I'll mark you tests later."
+                    content: "Go home and have a party. I'll mark you tests later.",
+                    date: "3 May"
                 },
                 {
                     heading: "IMY320 Workshop Postponed",

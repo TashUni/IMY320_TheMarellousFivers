@@ -21,7 +21,7 @@ const data = [
         profilePhoto: profile1,
         color: colors["IMY320"].normal,
         isWhite: colors["IMY320"].whiteText,
-        images: ["imgAnn1.jpeg", "imgAnn2.jpeg"]
+        images: ["https://www.animationboom.net/blog/wp-content/uploads/2018/02/Digital.png", "https://blogassets.leverageedu.com/blog/wp-content/uploads/2019/09/23165225/Multimedia.jpg"]
     },
     {
         module: "COS333",
@@ -34,7 +34,8 @@ const data = [
         heading: "Guest Lecturer",
         profilePhoto: profile2,
         color: colors["COS333"].normal,
-        isWhite: colors["COS333"].whiteText, images: []
+        isWhite: colors["COS333"].whiteText,
+        images: ["https://image.benq.com/is/image/benqco/teaching-maths-with-ifp-1200?$ResponsivePreset$", "https://image.benq.com/is/image/benqco/kahoot-1?$ResponsivePreset$", "https://image.benq.com/is/image/benqco/three-students-use-ezwrite-at-the-same-time-1200?$ResponsivePreset$ "]
     },
     {
         module: "WTW164",
@@ -48,7 +49,7 @@ const data = [
         profilePhoto: profile3,
         color: colors["WTW164"].normal,
         isWhite: colors["WTW164"].whiteText,
-        images: ["imgAnn3.jpeg"]
+        images: ["https://static.vecteezy.com/system/resources/previews/025/117/087/non_2x/gray-wolf-howling-in-the-arctic-winter-generated-by-ai-free-photo.jpg", "https://i2.wp.com/amotherfarfromhome.com/wp-content/uploads/2020/11/angry-baby-share.jpg"]
     },
     {
         module: "WTW164",
@@ -62,7 +63,7 @@ const data = [
         profilePhoto: profile3,
         color: colors["WTW164"].normal,
         isWhite: colors["WTW164"].whiteText,
-        images: ["imgAnn4.jpeg", "imgAnn5.jpeg"]
+        images: []
     }
 ];
 

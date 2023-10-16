@@ -61,7 +61,7 @@ function Announcement(props) {
                                     {
                                         props.images.map((el) => {
                                             console.log(el);
-                                            return <img  alt="annoucement Image" src={require(`./images/imgAnn1.jpeg`)}></img>
+                                            return <img  alt="annoucement Image" src={el}></img>
                                         })
                                     }
                                 </div>
