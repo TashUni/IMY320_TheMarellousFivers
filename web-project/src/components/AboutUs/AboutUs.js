@@ -6,6 +6,7 @@ import mat from './images/matt.jpg';
 import tash from './images/tash.jpg';
 import tom from './images/tom.jpg';
 import mon from './images/monica.jpg';
+import mark from './images/mark.jpg';
 
 import Navbar from "../Navbar/Navbar";
 import styles from "../../App.module.scss";
@@ -72,7 +73,7 @@ function AboutUs() {
                 </div>
                 <img
                     className={s.img}
-                    src="./images/test.jpg"
+                    src={mark}
                     alt="Picture of person from shoulders up"
                 />
             </div>
