@@ -25,8 +25,7 @@ function AboutUs() {
                 <div className={s.text_group}>
                     <div className={s.name}>Matthew Verster</div>
                     <div className={s.about}>
-                        About the person, wow they are so good and they do so much for the
-                        planet as a whole. Incredible.
+                    Matt is a Figma designer who enjoys creating designs that are easy to use and pleasing to the eye
                     </div>
                 </div>
             </div>
@@ -36,8 +35,7 @@ function AboutUs() {
                 <div className={s.text_group}>
                     <div className={s.name}>Latasha Friend</div>
                     <div className={s.about}>
-                        About the person, wow they are so good and they do so much for the
-                        planet as a whole. Incredible.
+                    Latasha is an amazing project manager who can handle any challenge with grace and efficiency. She is a problem-solver who always delivers high-quality results on time.
                     </div>
                 </div>
                 <img
@@ -56,8 +54,7 @@ function AboutUs() {
                 <div className={s.text_group}>
                     <div className={s.name}>Reniloe Brancon</div>
                     <div className={s.about}>
-                        About the person, wow they are so good and they do so much for the
-                        planet as a whole. Incredible.
+                    Monica is an excellent organizer and people manager who can handle any project with ease. She is a natural leader who inspires and motivates others to achieve their goals.
                     </div>
                 </div>
             </div>
@@ -67,8 +64,7 @@ function AboutUs() {
                 <div className={s.text_group}>
                     <div className={s.name}>Mark Grosvenor</div>
                     <div className={s.about}>
-                        About the person, wow they are so good and they do so much for the
-                        planet as a whole. Incredible.
+                    Mark is a talented video editor and copywriter who can turn any idea into a captivating story. He has a keen eye for details and a flair for words.
                     </div>
                 </div>
                 <img
@@ -87,8 +83,7 @@ function AboutUs() {
                 <div className={s.text_group}>
                     <div className={s.name}>Thomas Isebeck</div>
                     <div className={s.about}>
-                        About the person, wow they are so good and they do so much for the
-                        planet as a whole. Incredible.
+                    Tom is a passionate coder who loves to create amazing apps and websites. He is always learning new skills and technologies to improve his craft.
                     </div>
                 </div>
             </div>
