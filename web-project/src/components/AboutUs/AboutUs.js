@@ -54,7 +54,7 @@ function AboutUs() {
                     alt="Picture of person from shoulders up"
                 />
                 <div className={s.text_group}>
-                    <div className={s.name}>Reniloe</div>
+                    <div className={s.name}>Reniloe Brancon</div>
                     <div className={s.about}>
                         About the person, wow they are so good and they do so much for the
                         planet as a whole. Incredible.
